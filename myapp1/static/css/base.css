@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Anton", sans-serif;
+    /* background-color: #042F1A; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #042F1A;
+}
+
+.navbar {
+    background-color: #042F1A;
+}
+
+.navlist {
+    display: flex;
+    justify-content: space-between;
+    gap: 11vw;
+    padding: 2vw 5vw;
+}
+
+.navbar ul li {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: 800;
+}
+
+.navlist svg {
+    height: 6vw;
+    width: 15vw;
+    margin-top: -1vw;
+}
+
+.navlist button {
+    background-color: #FF73B5;
+    border: none;
+    font-size: 1vw;
+    font-weight: 700;
+    color: #042F1A;
+    /* width: 2vw 2vw; */
+    /* width: 8vw; */
+    padding: 1vw; 
+}
+
+.navbar i {
+    opacity: 0;
+    /* background-color: violet; */
+    color: #fff;
+    position: relative;
+    top: -2vw;
+    right: 7vw;
+    font-size: 2vw;
+}
+
+
+
+
+@media (max-width: 768x) {
+    .navbar i {
+        opacity: 1;
+        font-size: 7vw;
+    }
+
+    .navbar li svg {
+        position: relative;
+        left: 17vw;
+    }
+
+    .navbar li a {
+        display: none;
+    }
+
+    .navbar li button {
+        display: none;
+    }
+
+}
