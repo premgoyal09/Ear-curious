@@ -1,0 +1,2035 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{% endblock  %}
+
+{% block body %}
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "home.css" %} %}">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Anton", sans-serif;
+    /* background-color: #042F1A; */
+}   
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #042F1A;
+}
+
+
+
+.first {
+    text-align: center;
+    position: relative;
+    bottom: 8vw;
+    top: -2vw;
+    transition: all ease 10s;
+    background-color: #042F1A;
+}
+
+.first h1 {
+    color: #ffffff;
+    font-size: 12.5vw;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+}
+
+.first img {
+    height: 40vw;
+    width: 40vw;
+    position: relative;
+    bottom: 9vw;
+}
+
+#mind {
+    position: relative;
+    bottom: 21vw;
+}
+
+
+.aboutsection {
+    background-color: #FF73B5;
+}
+
+.aboutcntn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 12vw;
+    gap: 2vw;
+    padding-bottom: 5vw;
+}
+
+.aboutsection svg {
+    position: relative;
+    top: -4vw;
+}
+
+.abouttxt h3 {
+    font-size: 2.5vw;
+    padding-top: 2vw;
+    font-weight: 900;
+    color: #042F1A;
+}
+
+.abouttxt p {
+    font-size: 1.6vw;
+    line-height: 1.2;
+    font-weight: 200;
+}
+
+.aboutimg img {
+    height: 20vw;
+    width: 38vw;
+}
+
+
+.dic svg{
+    position: relative;
+    left: 48vw;
+    /* top: 2vw; */
+}
+
+
+
+
+
+
+
+.carousel_tape {
+    display: inline-block;
+    margin-bottom: 10vw;
+    min-width: 10vw;
+    width: 100%;
+    animation: 15s slide infinite linear;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: stack obviously-narrow Helvetica sans-serif;
+
+}
+
+.carousel_tape span img {
+    height: 89px;
+    width: 90px;
+    margin: 0 30px;
+    white-space: nowrap;
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+
+.inspire {
+    display: flex;
+    justify-content: center;
+    padding: 7vw;
+}
+
+.img-block img {
+    height: 35vw;
+    width: 35vw;
+    /* padding: 1vw; */
+}
+
+.text-block_fixed {
+    background-color: #FFF6F6;
+    position: fixed;
+    
+}
+
+.txt-block {
+    padding: 6vw 0vw 0vw 4vw;
+    gap: 2vw;
+    position: relative;
+    top: -5.3vw;
+    font-weight: 500;
+}
+
+.txt-block a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.hide-tab {
+    color: #042F1A;
+    font-family: ack obviously-narrow Helvetica sans-serif;
+    font-weight: 800;
+    font-size: 3.7vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    font-family: "Chocolate Classical Sans", sans-serif;
+}
+
+.txt-block p {
+    color: #042F1A;
+    font-weight: 300;
+    font-size: 1.8vw;
+    font-family: "Rubik", sans-serif;
+    margin: auto;
+    letter-spacing: 1px;
+    padding: 2vw 0vw;
+}
+
+.text-block_fixed svg {
+    position: relative;
+    left: 40vw;
+    bottom: 2vw;
+    width: 17vw;
+}
+
+
+
+
+.powertool {
+    display: flex;
+    justify-content: center;
+    background-color: #D4ED6D;
+    padding: 4vw;
+}
+
+.leftpower {
+    padding: 8vw 0vw;
+}
+
+.leftpower svg {
+    position: relative;
+    left: 24vw;
+    bottom: 1vw;
+}
+
+.leftpower h3 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    color: #042F1A;
+    line-height: 1;
+}
+
+.leftpower p {
+    font-size: 1vw;
+    color: #042F1A;
+    width: 23vw;
+    padding: 1vw 0vw;
+
+}
+
+.rightpower {
+    padding: 5vw 0vw;
+}
+
+.favour {
+    display: flex;
+    justify-content: center;
+    padding: 6vw;
+}
+
+.leftthird img {
+    height: 40vw;
+    width: 40vw;
+    /* background-color: #FF73B5; */
+}
+
+.rightthird {
+    padding: 5vw 4vw;
+}
+
+.rightthird h3 {
+    color: #FFF6F6;
+    font-size: 6vw;
+    line-height: .85em;
+    font-weight: 800;
+    letter-spacing: .0111em;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+}
+
+.rightthird p {
+    color: #FFF6F6;
+    padding: 1vw 0vw;
+    font-weight: 300;
+    font-weight: 1vw;
+}
+
+.rightthird svg {
+    position: relative;
+    left: 28vw;
+    top: 3vw;
+}
+
+.featuresection h4 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #042F1A;
+    font-weight: 1000;
+    font-size: 3.2vw;
+    padding: 3vw;
+}
+
+.featuresection {
+    background-color: #FFFFFF;
+}
+
+.featurecontain {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    padding: 5vw;
+}
+
+.imgboc img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 8vw;
+}
+
+.featurecontain h5 {
+    color: #042F1A;
+    font-size: 3vw;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.3;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.featurecontain p {
+    color: #042F1A;
+    font-size: 1.5vw;
+    font-weight: 100;
+    /* padding: 1vw; */
+}
+
+.hidden {
+    padding: 1vw;
+}
+
+.hidden svg {
+    width: 100%;
+    padding: 1vw;
+}
+
+.onebox {
+    background-color: #1ABE71;
+    border-radius: 2%;
+}
+
+.twobox {
+    border-radius: 2%;
+    background-color: #FFB500;
+}
+
+.threebox {
+    background-color: #1ABE71;
+    border-radius: 2%;
+}
+
+.fourbox {
+    background-color: #1ABE71;
+    border-radius: 2%;
+}
+
+.fivebox {
+    background-color: #F95B77;
+    border-radius: 2%;
+}
+
+.sixbox {
+    background-color: #1ABE71;
+    border-radius: 2%;
+}
+
+.fstrow {
+    display: flex;
+}
+
+.boximg {
+    overflow: hidden;
+}
+
+.boximg img {
+    width: 29vw;
+    height: 30vw;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70px;
+}
+
+.tiles_wrapper {
+    padding: 2vw;
+}
+
+.tiles_wrapper h4 {
+    color: #042F1A;
+    font-size: 4vw;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fstrow {
+    padding: 2vw;
+    gap: 1vw;
+}
+
+.scdrow {
+    display: flex;
+}
+
+.scdrow {
+    padding: 1vw;
+    gap: 1vw;
+}
+
+.onebox:hover {
+    animation: 2s hover infinite linear;
+    background-color: black;
+    cursor: pointer;
+}
+
+.twobox:hover {
+    animation: 2s hover infinite linear;
+    cursor: pointer;
+    background-color: black;
+}
+
+.threebox:hover {
+    animation: 2s hover infinite linear;
+    background-color: black;
+    cursor: pointer;
+}
+
+.fourbox:hover {
+    animation: 2s hover infinite linear;
+    cursor: pointer;
+    background-color: black;
+}
+
+.fivebox:hover {
+    cursor: pointer;
+    animation: 2s hover infinite linear;
+    background-color: black;
+}
+
+.sixbox:hover {
+    animation: 2s hover infinite linear;
+    background-color: black;
+    cursor: pointer;
+}
+
+@keyframes hover {
+    to {
+        transform: translateX(0);
+    }
+
+    form {
+        transform: translateX(-100%)
+    }
+}
+
+.btnpara {
+    text-align: center;
+}
+
+.center-appear {
+    background-color: #FF73B5;
+    padding: 1.2vw 2vw;
+    border: 1px solid #FF73B5;
+    color: #042F1A;
+    font-size: 2vw;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 10%;
+}
+
+
+
+.growing {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vw;
+    gap: 3vw;
+    margin-top: 14vw;
+}
+
+.leftimg img {
+    height: 25vw;
+    width: 40vw;
+    border-radius: 5%;
+}
+
+.righttxt {
+    position: relative;
+    top: -9vw;
+    left: 1.5vw;
+}
+
+.righttxt h4 {
+    color: #FFF6F6;
+    font-weight: 800;
+    font-size: 6vw;
+    letter-spacing: 0.1;
+    line-height: 0.9;
+    padding-right: 1vw;
+}
+
+.righttxt p {
+    color: #FFF6F6;
+    font-family: rubik Helvetica sans-serif;
+    padding-top: 1vw;
+    padding-right: 12vw;
+}
+
+.syan {
+    background-color: #FF73B5;
+    padding: 0.5vw;
+    border-radius: 5%;
+    border: 1px solid #FF73B5;
+    color: #042F1A;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 4vw;
+}
+
+.menu-selection {
+    padding: 2vw 0vw 2vw 6vw;
+    display: flex;
+    gap: 1vw;
+}
+
+.recipe1 {
+    height: 44vw;
+    width: 100%;
+    background-color: #FFB500;
+    overflow: hidden;
+    border-radius: 3%;
+    
+}
+
+.recipe2 {
+    height: 44vw;
+    width: 100%;
+    background-color: #19B86D;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.recipe3 {
+    height: 44vw;
+    width: 100%;
+    background-color: #19B86D;
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.menu-selection img {
+    height: 54vw;
+    width: 60vw;
+    position: relative;
+    right: 15vw;
+}
+
+.menu-selection span {
+    display: flex;
+    justify-content: right;
+    padding: 1vw 11vw;
+    color: #042F1A;
+    font-weight: 600;
+    font-size: 2vw;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5%;
+    text-align: right;
+    position: relative;
+    left: 8vw;
+}
+
+.contact_wrapper {
+    background-color: #FFF6F6;
+    text-align: center;
+}
+
+.contact_wrapper h3 {
+    font-size: 7vw;
+    font-weight: 800;
+    color: #042F1A;
+    text-transform: uppercase;
+}
+
+.contact_wrapper p {
+    position: relative;
+    top: 50px;
+}
+
+.contact_wrapper p a {
+    font-size: 2vw;
+    font-weight: 800;
+    color: #042F1A;
+    text-transform: uppercase;
+    background-color: #FF73B5;
+    box-shadow: #FF73B5;
+    text-decoration: none;
+    padding: 1vw;
+    border-radius: 3%;
+}
+
+.contain_appear img {
+    width: 30vw;
+    height: 30vw;
+}
+
+.footcontain {
+    padding: 2vw;
+    background-color: #FF73B5;
+}
+
+.svg svg {
+    width: 100%;
+}
+
+.contact_form {
+    display: flex;
+    border-bottom: 1px solid #042F1A;
+    margin: 2vw;
+}
+
+input#name {
+    padding: 1vw 9vw;
+    text-align: left;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btnl {
+    background-color: #042F1A;
+    color: #fff;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 3%;
+    font-weight: 800;
+}
+
+.social_part {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+.icons ul {
+    display: flex;
+    gap: 2vw;
+}
+
+.icons ul li {
+    list-style-type: none;
+}
+
+.icons ul li p {
+    padding: 0.8vw;
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.txt-blocks {
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+.txt-blocks a {
+    text-decoration: none;
+    color: #000;
+}
+
+.ticker {
+    background-color: #FF73B5;
+    position: fixed;
+    bottom: 1px;
+    margin-top: 2vw;
+    margin-top: 10vw;
+    padding: 1vw;
+}
+
+.ticker_tape span {
+    color: #042F1A;
+    font-weight: 800;
+    font-size: 1.5vw;
+    animation: 3s slidetxt infinite linear;
+    margin-left: 2vw;
+}
+
+.ticker_tape span em {
+    white-space: nowrap;
+}
+
+
+
+@keyframes slidetxt {
+    form {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+#sticker {
+    transform: rotate(1305.06deg);
+    background-size: contain;
+
+}
+
+
+#sticker svg {
+    width: 16vw;
+    height: 16vw;
+    position: fixed;
+    left: -35px;
+    bottom: 15%;
+    z-index: 89;
+    transform: rotate(47.5824deg);
+}
+
+
+
+
+/* for after using responsive */
+.menu {
+    display: none;
+    padding: 2vw;
+}
+
+.menu i {
+    height: 30px;
+    width: 10vw;
+    background-color: #FF73B5;
+    border-radius: 5%;
+}
+
+
+
+@media (max-width:768px) {
+    .navbar i {
+        opacity: 1;
+        font-size: 7vw;
+    }
+
+    .navbar li svg {
+        position: relative;
+        left: 17vw;
+    }
+
+    .navbar li a {
+        display: none;
+    }
+
+    .navbar li button {
+        display: none;
+    }
+
+    .first h1 {
+        font-size: 17.5vw;
+        line-height: 1;
+        padding: 1vw 0vw;
+    }
+
+    #mind {
+        font-size: 21.5vw;
+        line-height: 1;
+    }
+
+    .first img {
+        height: 81vw;
+        width: 82vw;
+    }
+
+    .featurecontain {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: static;
+    }
+
+    .tiles_full {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footcontain {
+        padding: 3vw;
+        display: block;
+    }
+
+    .content_name {
+        padding: 2vw;
+    }
+
+    .social_part {
+        padding: 2vw;
+    }
+    .tiles_wrapper{
+        display: grid;
+    }
+    .fstrow{
+        display: grid;
+    }
+    .scdrow{
+        display: grid;
+    }
+    
+}
+
+@media (max-width:1024px) {
+    .first img {
+        position: relative;
+        bottom: 7vw;
+    }
+
+    #mind {
+        position: relative;
+        bottom: 17vw;
+    }
+    .aboutsection{
+        padding: 2vw;
+    }
+    .aboutcntn{
+        display: grid;
+
+    }
+    .aboutsection h3{
+        font-size: 6vw;
+    }
+    .aboutsection p{
+        position: relative;
+        top: 33vw;
+        padding: 2vw;
+        font-size: 2vw;
+    }
+    .dic svg{
+        opacity: 0;
+    }
+    .aboutsection img{
+        height: 30vw;
+        width: 65vw;
+        margin-bottom: 2vw;
+        position: relative;
+        top: -13vw;
+    }
+    .inspire {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inspire svg {
+        display: none;
+    }
+
+    .inspire h3 {
+        /* display: none; */
+        position: relative;
+        bottom: 40vw;
+        padding: 0vw 14vw;
+    }
+
+    .img-block img {
+        position: relative;
+        top: 5vw;
+    }
+
+    .txt-block p {
+        font-size: -1.2vw;
+        padding: 0vw 11vw;
+    }
+
+    .powertool {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .powertool svg {
+        display: none;
+    }
+
+    .powertool h3 {
+        font-size: 7vw;
+        font-weight: 800;
+    }
+
+    .leftpower {
+        padding: 0;
+    }
+
+    .rightpower img {
+        padding: 1vw 1vw;
+        position: relative;
+        top: -12vw;
+    }
+
+    .powertool p {
+        display: block;
+        font-size: 1.6vw;
+        text-align: center;
+        padding: 0vw 6vw;
+        width: 50vw;
+        position: relative;
+        left: 20vw;
+        top: 30vw;
+    }
+
+    .favour {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rightthird h3 {
+        position: relative;
+        top: -40vw;
+        padding: 0vw 11vw;
+    }
+
+    .leftthird img {
+        position: relative;
+        top: 17vw;
+        padding: 3vw 2vw;
+        height: 40vw;
+        width: 48vw;
+    }
+
+    .favour svg {
+        display: none;
+    }
+
+    .rightthird p {
+        text-align: center;
+        padding: 0vw 11vw;
+        font-weight: 200;
+    }
+
+    .featurecontain {
+        padding: 3vh 5vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sixbox {
+        display: none;
+    }
+
+    .threebox {
+        display: none;
+    }
+
+    .tiles_full {
+        /* background-color: yellow; */
+    }
+
+    .hidden {
+        padding: 2vw 2vw;
+        /* background-color: pink; */
+    }
+
+    .tiles_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* background-color: rgb(49, 226, 0); */
+        display: flex;
+        padding: 0vw 12vw;
+    }
+
+    .fstrow {
+        /* display: grid; */
+        padding: 2vw 2vw;
+    }
+
+    .scdrow {
+        padding: 2vw;
+        /* display: grid; */
+    }
+
+    .fstrow .boxtxt h4 {
+        padding: 0vw 7vw;
+        width: 7vw;
+    }
+
+    .scdrow .boxtxt h4 {
+        padding: 0vw 7vw;
+        width: 7vw;
+    }
+
+
+    .onebox {
+        padding: 0vw 4vw;
+        border-radius: 5%;
+    }
+
+    .twobox {
+        border-radius: 5%;
+        padding: 0vw 4vw;
+    }
+
+    .threebox {
+        border-radius: 5%;
+        padding: 0vw 4vw;
+    }
+
+    .fivebox {
+        border-radius: 5%;
+        padding: 0vw 4vw;
+    }
+
+    .fourbox {
+        padding: 0vw 4vw;
+        border-radius: 5%;
+    }
+
+    .growing {
+        display: grid;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .syan {
+        margin-top: 0;
+    }
+
+    .leftimg {
+        position: relative;
+        top: 66vw;
+    }
+
+    .righttxt {
+        position: relative;
+        top: -39vw;
+    }
+
+    .leftimg img {
+        height: 60vw;
+        width: 67vw;
+        padding: 1vw 0vw;
+    }
+
+    .righttxt {
+        margin-bottom: 67vw;
+    }
+
+    .svg svg {
+        width: 100%;
+        padding: 2vw 2vw;
+    }
+}
+
+
+
+
+</style>
+    
+
+<div class="first">
+    <h1 class="animate__animated animate__bounce animate__zoomIn">MEAT-FREE</h1>
+    <img class="animate__animated animate__bounce animate__zoomIn"
+        src="https://eat-curious.com/wp-content/uploads/2023/07/Afro-Fusion-Spice-Bowl-1024x1024.png" alt="">
+    <h1 class="animate__animated animate__bounce animate__zoomIn" id="mind">YOUR MIND</h1>
+</div>
+<div class="carousel--logos">
+    <div class="carousel_tape">
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-19-473x206.jpg" alt="Home 23">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-29-439x473.png" alt="Home 33">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-30-473x434.png" alt="Home 34">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-31-473x349.png" alt="Home 35">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-32-473x473.png" alt="Home 36">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-33-473x123.png" alt="Home 37">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-34.png" alt="Home 38">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-35-468x473.png" alt="Home 39">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-37-473x473.png" alt="Home 41">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-38.png" alt="Home 42">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-39.png" alt="Home 43">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-40-473x467.png" alt="Home 44">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-41-473x473.png" alt="Home 45">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-42-463x473.png" alt="Home 46">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-43.png" alt="Home 47">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-44-473x355.png" alt="Home 48">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-46-473x473.png" alt="Home 50">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-49-473x473.png" alt="Home 53">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-28-473x473.png" alt="Home 32">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-45-473x317.png" alt="Home 49">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-47-473x164.png" alt="Home 51">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-48-473x373.png" alt="Home 52">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-50-473x334.png" alt="Home 54">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/05/home-52-473x334.png" alt="Home 56">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/05/home-53-473x266.png" alt="Home 57">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-30-473x434.png" alt="Home 34">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-30-473x434.png" alt="Home 34">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-31-473x349.png" alt="Home 35">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-32-473x473.png" alt="Home 36">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-33-473x123.png" alt="Home 37">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-34.png" alt="Home 38">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-35-468x473.png" alt="Home 39">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-37-473x473.png" alt="Home 41">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-38.png" alt="Home 42">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-39.png" alt="Home 43">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-40-473x467.png" alt="Home 44">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-41-473x473.png" alt="Home 45">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-42-463x473.png" alt="Home 46">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-42-463x473.png" alt="Home 46">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-43.png" alt="Home 47">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-44-473x355.png" alt="Home 48">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-46-473x473.png" alt="Home 50">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-49-473x473.png" alt="Home 53">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-28-473x473.png" alt="Home 32">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-45-473x317.png" alt="Home 49">
+        </span>
+        <span>
+            <img src="https://eat-curious.com/wp-content/uploads/2023/02/home-47-473x164.png" alt="Home 51">
+        </span>
+    </div>
+</div>
+<section class="aboutsection">
+    <svg class="aboutcvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 209" fill="none">
+        <path
+            d="M1440 199L0.000923781 199L-1.33811e-05 54.9997C5.33517 43.0663 37.413 6.22912 123.043 2.32364C230.08 -2.5582 278.097 43.0054 368.628 50.0569C459.159 57.1084 530.183 2.32361 630.218 2.3236C730.253 2.32359 742.757 26.1902 868.801 43.0054C994.845 59.8205 1051.86 -37.2745 1221.42 16.9686C1324.86 50.0573 1440 53.8538 1440 43.0053L1440 88.8132C1440 147.564 1440 236.853 1440 199Z"
+            fill="#ff73b5" />
+    </svg>
+    <div class="dic" data-aos="zoom-in">
+        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="64" viewBox="0 0 41 64" fill="none">
+            <path
+                d="M2.44531 5.56149C9.2181 2.6463 16.7405 1.48086 24.0853 2.21287C28.2019 2.62061 32.4511 3.71542 35.4918 6.5054C38.8555 9.59396 40.232 14.6506 38.7812 18.9784C37.4014 23.0944 33.1587 26.8122 28.6834 26.9856C25.6912 27.1012 21.0899 24.3593 22.8606 20.8309C24.2178 18.1244 28.7642 18.3106 31.2458 18.8596C33.9666 19.4632 36.5032 21.0492 37.9508 23.454C42.956 31.7597 34.3834 39.9916 27.0742 42.788C23.4455 44.1782 19.6326 45.273 15.7356 45.5394C12.3622 45.7706 7.39566 45.5844 5.07559 42.6981C2.04141 38.9257 7.09836 34.8579 10.5849 34.296C18.3562 33.0407 26.2406 38.7234 26.2438 46.7659C26.247 54.9464 18.3368 60.2663 11.0955 62"
+                stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+    <div class="aboutcntn">
+        <div class="abouttxt" data-aos="zoom-in">
+            <h3>CURIOUS... BY NAME, BY NATURE</h3>
+            <p>It’s what inspires us to whip up, throw together, tear, shake, and break the rules – on a mission
+                to
+                redefine food for a new generation.</p>
+        </div>
+        <div class="animate__animated animate__bounce animate__zoomIn">
+
+            <div class="aboutimg">
+                <img src="https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg"
+                    class="attachment-large size-large image-ready" alt="Home 1" decoding="async"
+                    fetchpriority="high"
+                    srcset="https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg 300w, https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg 473w, https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg 1024w, https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg 1536w, https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg 2048w">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-block_fixed">
+    <div class="inspire">
+        <div class="img-block" data-aos="zoom-in">
+            <img src="https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg"
+                class="attachment-large size-large image-ready" alt="Home 3" decoding="async"
+                srcset="https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg 300w, https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg 473w, https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg 1024w, https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg 1536w, https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg 2048w">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="115" height="112" viewBox="0 0 115 112" fill="none">
+            <path
+                d="M100.67 62.1391C101.377 52.5103 99.8571 42.7448 96.3547 33.7521C94.4423 28.8447 92.5155 23.6397 89.1256 19.531C84.0057 13.3221 77.8201 15.8858 75.2787 23.1641C73.3597 28.6607 72.563 34.784 73.5795 40.5302C69.4913 34.4843 64.4857 29.0648 58.785 24.5084C56.6337 22.7869 54.1662 21.1174 51.4114 21.183C48.1803 21.2562 45.4031 23.8197 44.197 26.8168C42.9908 29.8139 43.0658 33.1661 43.3936 36.3831C44.2695 44.8788 46.8133 53.1998 50.8375 60.7341C45.9154 53.3052 34.9981 50.8658 27.1273 55.0456C19.2601 59.2295 15.1601 69.1912 17.2943 77.845C19.4285 86.4989 27.2973 93.2812 36.098 94.6689"
+                stroke="#FF73B5" stroke-width="2.85782" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <div class="txt-block" data-aos="zoom-in">
+            <h3 class="hide-tab">Inspiring good through tasty goodness</h3>
+            <p>We’re here to inspire discovery and tempt everyone to eat more plants. Because we care about the
+                future –
+                yours, ours and the planet’s.</p>
+        </div>
+    </div>
+</section>
+
+<section class="powersection">
+    <div class="powertool">
+        <div class="animate__animated animate__bounce animate__zoomIn">
+            <div class="leftpower" data-aos="zoom-in">
+                <svg xmlns="http://www.w3.org/2000/svg" width="140" height="86" viewBox="0 0 140 86" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M77.4349 13.2582C71.1486 14.6704 65.8632 19.0933 61.2375 24.0994C55.3626 30.4583 50.4083 37.835 49.1764 46.1453C49.1011 46.6533 48.7591 47.082 48.2805 47.2682C47.8019 47.4545 47.2602 47.3698 46.8613 47.0464C37.7182 39.6333 23.0234 41.8906 14.452 50.3059C5.88798 58.7139 2.71456 71.6305 3.19933 84.049C3.23014 84.8381 2.61537 85.5028 1.8262 85.5337C1.03703 85.5645 0.372315 84.9497 0.341509 84.1605C-0.16091 71.2899 3.0973 57.4457 12.4484 48.265C21.25 39.6238 36.251 36.6269 46.7719 43.4511C48.6143 35.2641 53.6142 28.1362 59.1368 22.1586L59.1369 22.1585C63.8608 17.0462 69.6431 12.0773 76.8081 10.4677C83.3046 9.00833 91.2038 11.0737 95.1245 16.7468C100.732 10.2242 107.396 3.76255 116.05 1.5151C120.817 0.274526 126.18 0.846471 130.632 2.92686C135.091 5.01064 138.775 8.68362 139.895 13.7345C140.066 14.5055 139.579 15.2691 138.808 15.4401C138.037 15.611 137.274 15.1245 137.103 14.3535C136.222 10.3791 133.291 7.32669 129.421 5.5179C125.543 3.70583 120.862 3.21796 116.77 4.28308L116.769 4.28328C108.395 6.45805 101.882 13.1087 96.0026 20.1339C95.69 20.5074 95.2088 20.6961 94.7257 20.6347C94.2425 20.5733 93.8238 20.2701 93.6146 19.8303C90.9969 14.3269 83.7248 11.8452 77.4349 13.2582Z"
+                        fill="#042F1A" />
+                </svg>
+                <h3>Powered by positivity</h3>
+                <p>We’re not crusading or going up against an industry. We’re for; for flavour, for fun, for what’s
+                    possible.
+                </p>
+            </div>
+        </div>
+        <div class="animate__animated animate__bounce animate__zoomIn">
+            <div class="rightpower" data-aos="zoom-in">
+                <img src="https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg"
+                    class="attachment-large size-large image-ready" alt="Home 11" decoding="async"
+                    srcset="https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg 300w, https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg 473w, https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg 1024w, https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg 1536w, https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg 2048w">
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="thirdsection">
+    <div class="favour">
+        <div class="animated__animated animate__bounce animate__zoomIn">
+            <div class="leftthird" data-aos="zoom-in">
+                <img src="https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg"
+                    class="attachment-large size-large image-ready" alt="Home 2" decoding="async"
+                    srcset="https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg 300w, https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg 473w, https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg 1024w, https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg 1536w, https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg 2048w">
+            </div>
+        </div>
+        <div class="animated__animated animate__bounce animate__zoomIn">
+            <div class="rightthird" data-aos="zoom-in">
+                <h3 class="">Flavoursome food for everyone</h3>
+                <p>Our curious creations are made for vegans and meat-eaters alike. Because meat-free doesn’t
+                    mean flavour free.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="156" height="133" viewBox="0 0 156 133" fill="none">
+                    <path
+                        d="M3.31565 58.0521C2.77985 75.8168 6.00388 93.687 12.7235 110.156C15.2947 116.448 18.6334 122.85 24.4006 126.476C33.1486 131.973 45.2345 129.229 53.054 122.5C60.8734 115.772 65.2253 105.927 68.5733 96.1882C77.6881 69.6997 81.1631 41.2903 78.7103 13.3775C78.2808 8.48454 75.3935 1.97366 70.6849 3.41895C68.0205 4.23919 66.8849 7.30237 66.1815 9.99308C61.389 28.4479 60.1907 47.8277 62.6731 66.7413C64.4103 79.9661 68.4932 93.8579 78.8363 102.322C83.0926 105.803 88.57 108.226 94.0273 107.506C98.9847 106.848 103.269 103.708 106.806 100.18C112.755 94.242 117.086 86.1069 117.961 77.5216C118.712 70.1026 116.603 56.809 109.4 52.5417C100.333 47.1784 100.05 68.2225 100.69 72.4278C101.88 80.2383 105.007 88.7926 110.334 94.788C120.525 106.255 138.159 110.434 152.412 104.751"
+                        stroke="#D4ED6D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featuresection">
+    <div class="col-xl-6 md-12">
+        <!-- <div class="animated__animated animate__bounce animate__zoomIn"> -->
+        <h4>features &
+            <br>
+            benifits
+        </h4>
+        <!-- </div> -->
+        <!-- <div class="animated__animated animate__bounce animate__zoomIn"> -->
+        <div class="col-xl-6 md-12">
+            <div class="featurecontain">
+                <div class="firstfeature" data-aos="zoom-in">
+                    <div class="imgboc"><img src="https://eat-curious.com/wp-content/uploads/2022/12/home-9.png"
+                            alt="Home 13">
+                    </div>
+                    <h5>Plant based</h5>
+                    <p>Plant-protein yumminess, for everyone.</p>
+                </div>
+                <div class="secondfeature" data-aos="zoom-in">
+                    <div class="imgboc"><img src="https://eat-curious.com/wp-content/uploads/2022/12/home-11.png"
+                            alt="Home 15">
+                    </div>
+                    <h5>Real ingredients</h5>
+                    <p>If we don’t know exactly whawe don’t include it.</p>
+                </div>
+                <div class="thirdfeature" data-aos="zoom-in">
+                    <div class="imgboc"><img src="https://eat-curious.com/wp-content/uploads/2022/12/home-12.png"
+                            alt="Home 16">
+                    </div>
+                    <h5>unreal texture</h5>
+                    <p>It’s not meat. No really, it’s not!</p>
+                </div>
+                <div class="fourthfeature" data-aos="zoom-in">
+                    <div class="imgboc"><img src="https://eat-curious.com/wp-content/uploads/2022/12/home-10.png"
+                            alt="Home 14">
+                    </div>
+                    <h5>Bland is banned</h5>
+                    <p>Foodies unite, because here flavour rules.</p>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</section>
+
+<section class="tiles_full">
+    <div class="hidden">
+        <svg class="tiles__title" width="1224" height="312" viewBox="0 0 1224 312" fill="none"
+            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <g clip-path="url(#clip0_587_15588)">
+                <path
+                    d="M53.5642 159.552C95.363 133.013 98.7096 180.342 100.383 212.379C102.173 246.706 109.753 311.182 58.0486 309.41C38.8225 309.611 19.5964 309.795 0.353516 310.012C0.671441 290.86 0.738378 271.708 0.738378 252.555C0.738378 233.403 0.637975 214.218 0.353516 195.065C17.7223 182.698 35.4759 170.85 53.5642 159.552ZM53.9658 231.532C53.1124 205.962 51.2383 203.572 47.4734 205.26C46.7204 205.594 46.1013 205.878 45.3483 206.413C45.3818 215.939 45.683 225.899 45.9842 236.061C46.2854 246.222 46.5364 254.461 46.8878 261.547C47.6575 261.38 48.4439 261.229 49.2136 261.062C53.2295 260.226 54.8024 256.516 53.9658 231.548V231.532Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M186.422 217.225C207.455 218.613 211.12 246.572 212.241 262.315C213.094 274.214 215.219 296.608 216.608 308.09C200.795 308.207 192.897 308.257 177.085 308.374C170.291 308.424 167.882 303.21 166.777 289.255C165.84 277.456 167.714 252.689 157.926 244.182C157.608 244.232 157.457 244.249 157.139 244.299C158.562 265.724 160.034 287.133 162.326 308.491C146.096 308.624 129.865 308.758 113.634 308.909C112.529 278.944 111.291 248.945 109.869 219.014C108.446 189.166 106.94 159.268 105.066 129.403C125.146 118.39 145.594 108.045 166.359 98.385C200.21 78.2134 205.313 124.774 206.987 145.831C208.693 167.239 211.421 204.374 186.305 215.22C186.355 216.022 186.372 216.423 186.405 217.242L186.422 217.225ZM161.657 175.746C160.754 158.432 158.98 154.872 155.081 156.276C154.429 156.51 152.437 157.028 152.103 157.63C148.84 163.629 153.609 186.726 154.479 200.981C155.516 200.714 156.57 200.446 157.742 200.146C161.674 199.143 162.544 193.076 161.64 175.763L161.657 175.746Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M276.965 311.666C219.421 311.499 218.333 226.334 216.359 187.06C214.033 140.901 212.075 73.8682 264.75 54.4152C324.738 32.2715 324.637 134.049 326.076 166.587C327.666 202.702 339.195 311.85 276.965 311.666ZM274.941 173.907C273.033 135.887 271.761 130.038 268.432 130.857C265.085 131.692 264.349 138.093 266.005 175.595C266.541 187.879 271.494 224.362 272.916 224.261C275.811 224.044 275.593 186.943 274.941 173.907Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M393.327 311.633C331.716 311.55 334.611 203.79 333.071 165.519C331.281 120.914 324.203 34.0939 383.421 20.3064C447.207 5.44921 443.408 117.989 444.362 152.182C445.416 189.668 457.648 311.734 393.327 311.65V311.633ZM392.59 156.026C392.239 144.094 388.139 106.759 386.416 106.876C383.387 107.076 382.986 144.094 383.521 157.129C384.14 171.802 389.294 212.68 390.064 212.647C392.724 212.513 393.042 171.184 392.607 156.026H392.59Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M506.525 172.585C511.411 171.95 516.849 171.298 522.555 170.663C522.789 193.275 523.074 215.903 523.392 238.515C523.726 261.26 524.094 284.006 524.513 306.751C502.124 306.784 479.752 306.834 457.364 306.901C456.427 257.784 455.439 208.667 454.218 159.583C452.996 110.533 451.875 61.4158 449.984 12.3655C468.073 9.74166 486.077 7.41866 504.232 5.39648C504.534 55.9007 505.504 106.422 506.24 156.926C506.341 163.193 506.408 166.335 506.508 172.602L506.525 172.585Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M533.312 306.736C532.961 256.131 532.275 205.51 531.605 154.905C530.953 104.301 530.334 53.713 529.363 3.10843C547.017 1.68789 564.804 0.735298 582.507 0.300781C582.407 51.2228 582.708 102.162 582.942 153.084C583.193 204.273 583.528 255.479 583.929 306.685C567.046 306.685 550.179 306.702 533.296 306.736H533.312Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M701.881 3.71026C700.141 54.0474 699.773 104.451 699.07 154.789C698.35 205.426 697.464 256.081 697.48 306.736C681.099 306.702 664.7 306.686 648.319 306.686C646.211 286.798 644.035 266.844 641.944 247.04C639.718 226.016 637.928 204.825 636.271 183.667C636.104 183.667 636.02 183.667 635.87 183.667C636.288 207.516 636.656 231.364 636.807 255.195C636.924 272.342 636.79 289.522 637.125 306.686C620.224 306.686 611.774 306.686 594.891 306.686C594.907 255.58 594.991 204.457 594.857 153.351C594.723 102.262 594.79 51.1395 594.004 0.0502858C612.209 -0.100124 630.281 0.0502858 648.47 0.518227C650.109 26.3386 652.82 52.3595 654.945 77.8623C656.317 94.4241 657.873 111.37 658.861 128.133C659.028 127.982 659.112 127.899 659.279 127.731C659.078 110.468 658.861 93.1706 658.844 75.9404C658.827 50.9724 658.877 25.9041 658.559 0.902608C675.912 1.67137 684.579 2.22287 701.898 3.69354L701.881 3.71026Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M764.144 205.695C764.479 197.823 765.048 173.808 765.248 165.535C765.516 154.505 765.767 143.876 765.817 136.389C774.535 137.96 783.387 138.812 789.796 139.464C797.56 140.266 807.633 141.353 817.84 141.804C817.02 183.501 829.252 311.466 760.496 311.984C696.091 312.469 708.223 188.364 708.808 151.196C709.394 114.881 701.58 -4.91252 768.428 6.3515C818.191 14.7243 820.701 65.0113 819.229 106.725C818.995 113.193 818.677 119.677 818.308 126.913C810.31 125.108 800.906 123.554 791.77 122.518C783.169 121.549 774.97 121.081 768.662 121.248C768.796 115.75 768.863 112.992 768.997 107.477C769.432 89.7788 767.24 82.5925 766.152 83.0939C757.083 87.3054 759.793 136.389 759.342 155.976C758.923 174.075 754.004 220.919 763.91 226.134C765.483 226.969 768.746 221.237 769.817 205.578C767.541 205.611 766.403 205.628 764.127 205.661L764.144 205.695Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M961.726 59.3444C953.142 115.063 942.433 173.639 937.296 226.717C934.82 252.22 935.071 280.865 934.167 307.955C925.55 307.236 911.979 306.802 901.99 306.735C892.134 306.685 878.263 306.952 869.846 307.654C871.77 278.257 874.23 247.457 874.163 219.347C873.996 159.216 868.307 93.4038 864.709 30.4824C880.906 34.4265 897.07 38.8051 913.034 43.5848C911.729 69.0876 911.059 94.7074 910.658 120.127C910.356 139.479 910.306 158.999 910.273 178.435C910.708 178.502 910.925 178.536 911.344 178.603C913 159.517 914.673 140.365 916.163 121.33C918.137 96.3118 919.71 71.1098 920.865 45.9579C937.296 50.9716 945.479 53.6622 961.743 59.3611L961.726 59.3444Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M1048.02 93.9556C1047.47 101.894 1046.53 114.662 1045.94 125.809C1045.32 137.541 1044.79 150.443 1044.62 158.532C1032.98 154.554 1021.15 150.677 1011.26 147.802C1010.97 153.284 1010.84 156.025 1010.55 161.506C1021.91 164.531 1033.24 167.389 1043 169.378C1041.88 187.41 1040.86 205.443 1040.04 223.475C1030.72 220.935 1018.99 218.244 1007.73 216.339C1007.42 222.071 1007.27 224.929 1006.99 230.661C1017.33 232.149 1030.18 233.77 1040.62 235.124C1039.87 244.516 1039.12 258.821 1038.43 271.974C1037.79 284.274 1037.06 298.279 1036.79 308.29C1009.2 308.072 981.589 307.888 953.996 307.721C956.456 266.626 958.531 225.481 960.522 184.369C962.53 143.223 964.454 102.028 965.977 60.832C993.737 70.993 1020.98 81.9897 1048 93.9389L1048.02 93.9556Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M1132.77 137.122C1132.08 146.615 1131.4 161.756 1130.78 175.293C1130.16 188.83 1129.46 204.656 1129.22 215.519C1124.12 213.781 1121.58 212.912 1116.47 211.207C1115.02 243.846 1113.29 276.502 1112.36 309.174C1105.35 308.405 1093.63 308.272 1085.13 308.188C1076.61 308.104 1065.19 307.987 1057.82 308.756C1060.35 271.404 1062.27 234.003 1064.32 196.617C1059.08 195.464 1056.45 194.896 1051.18 193.793C1052.18 177.432 1053.02 161.037 1053.87 144.693C1054.69 129.067 1055.53 113.391 1056.2 97.748C1082.19 110.082 1107.62 123.184 1132.77 137.155V137.122Z"
+                    fill="#FFF6F6"></path>
+                <path
+                    d="M1182.03 164.565C1203.25 179.055 1223.85 199.176 1223.65 227.085C1223.53 243.53 1220.2 249.647 1210.06 254.059C1205.56 256.683 1204.09 259.958 1204 264.888C1204 265.908 1203.97 266.76 1204.09 267.98C1197.01 266.108 1186.3 263.434 1178.27 261.763C1168.56 259.741 1161.8 258.738 1152.67 258.036C1152.62 256.115 1152.68 254.209 1152.78 251.903C1153.67 229.141 1158.67 223.726 1169.55 222.924C1179.17 222.222 1180.17 215.003 1180.43 206.814C1180.56 202.234 1179.62 199.661 1178 198.875C1175.25 197.555 1174.22 202.034 1173.92 211.426C1173.85 213.381 1173.65 215.872 1173.82 218.713C1170.9 217.409 1166.22 215.604 1160.75 213.565C1153.12 210.724 1143.13 207.749 1137.3 207.098C1137.42 201.232 1137.62 195.516 1137.76 190.67C1138.64 158.064 1152.06 144.093 1182.03 164.565ZM1206.75 291.578C1206.56 305.299 1196.77 311.482 1176.81 311.432C1157.12 311.382 1147.71 303.477 1148.42 286.013C1149.1 268.749 1158.94 262.733 1178.15 266.376C1197.61 270.069 1206.93 278.024 1206.76 291.595L1206.75 291.578Z"
+                    fill="#FFF6F6"></path>
+            </g>
+            <defs>
+                <clipPath id="clip0_587_15588">
+                    <rect width="1224" height="312" fill="white"></rect>
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+    <div class="tiles_wrapper">
+        <div class="fstthird">
+            <div class="fstrow">
+                <div class="onebox">
+                    <div class="boxtxt">
+                        <h4>curious pieces</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\download.png" alt="">
+                    </div>
+                </div>
+                <div class="twobox">
+                    <div class="boxtxt">
+                        <h4>curious mince</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="https://eat-curious.com/wp-content/uploads/2023/02/mince-10-768x768.png" alt="">
+                    </div>
+                </div>
+                <div class="threebox">
+                    <div class="boxtxt">
+                        <h4>curious negg</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\thirdimg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scdthird">
+            <div class="scdrow">
+                <div class="fourbox">
+                    <div class="boxtxt">
+                        <h4>curious tenders</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\fourimg.png" alt="">
+                    </div>
+                </div>
+                <div class="fivebox">
+                    <div class="boxtxt">
+                        <h4>curious tenders</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\five.png" alt="">
+                    </div>
+                </div>
+                <div class="sixbox">
+                    <div class="boxtxt">
+                        <h4>curious fillets</h4>
+                    </div>
+                    <div class="boximg">
+                        <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\fourimg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btnpara">
+        <button class="center-appear">view all</button>
+    </div>
+</section>
+
+<section class="growing">
+    <div class="leftimg" data-aos="zoom-in">
+        <img width="1024" height="576" src="https://eat-curious.com/wp-content/uploads/2023/07/home-54-1024x576.jpg"
+            class="attachment-large size-large image-ready" alt="Home 58" decoding="async"
+            srcset="https://eat-curious.com/wp-content/uploads/2023/07/home-54-1024x576.jpg 1024w, https://eat-curious.com/wp-content/uploads/2023/07/home-54-300x169.jpg 300w, https://eat-curious.com/wp-content/uploads/2023/07/home-54-473x266.jpg 473w, https://eat-curious.com/wp-content/uploads/2023/07/home-54-768x432.jpg 768w">
+    </div>
+    <div class="righttxt" data-aos="zoom-in">
+        <h4>WE'RE GROWING MORE THAN PLANTS...
+        </h4>
+        <p>We’re here to grow a positive, curious and thoughtful attitude to plant-based food. Which is why we
+            put
+            curiosity at the heart of everything we do. So much so, we’ve built our own vertical farm – a
+            near-off-grid, plant playground where we’re researching how to add even more flavour, nutrition and
+            sustainability to the way we all eat.
+        </p>
+        <p>&nbsp;</p>
+        <button class="syan">visit syan farms</button>
+    </div>
+</section>
+
+<section class="menu-selection">
+    <div class="recipe1" data-aos="zoom-in">
+        <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/afro-fusion-spice-bowl.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe2" data-aos="zoom-in">
+        <span>TENDERS</span>
+        <article>
+            <div class="article1">
+                <img src="C:\Users\HP\Desktop\TRY THIS\EAT CURIOUS\recipe1.jpeg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe3" data-aos="zoom-in">
+        <span>RENDERS</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+
+    <!-- <div class="recipe1">
+        <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div>
+    <div class="recipe1">
+                 <span>mince</span>
+        <article>
+            <div class="article1">
+                <img src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg" alt="">
+            </div>
+        </article>
+    </div> -->
+</section>
+
+<section class="contact_wrapper">
+    <div class="contain_appear">
+        <h3 data-aos="zoom-in">intrigued?</h3>
+        <p><a href="#">let's chat</a></p>
+        <img class="contact__image lazy--placeholder lazy--loaded"
+            data-src="https://eat-curious.com/wp-content/uploads/2022/12/home-6.svg"
+            src="https://eat-curious.com/wp-content/uploads/2022/12/home-6.svg" alt="Home 4">
+    </div>
+</section>
+
+<footer class="footcontain">
+    <div class="content_name">
+        <div class="svg" data-aos="zoom-in">
+            <svg viewBox="0 0 1224 314" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_816_18455)">
+                    <path
+                        d="M44.214 230.312C44.2777 232.47 44.3095 233.549 44.3731 235.707C57.5076 231.36 70.4932 227.069 81.7341 222.929C82.1778 239.219 82.8793 255.501 83.5741 271.782C72.5307 273.108 59.4866 274.799 46.481 276.599C47.2829 288.323 48.0933 300.114 48.912 311.969C32.6081 312.095 16.3042 312.229 0.00195312 312.366C0.286577 292.976 0.435585 273.572 0.435585 254.192C0.435585 234.913 0.469071 215.604 0.00195312 196.316C26.0283 178.069 52.4916 160.867 79.7367 144.505C79.8456 152.208 80.1134 163.675 80.5286 173.466C80.9171 182.594 81.56 192.518 81.8446 199.199C68.6933 204.098 54.9845 209.526 43.7436 214.321C43.9328 220.717 44.0265 223.913 44.2157 230.309L44.214 230.312Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M174.597 95.1318C174.719 101.852 175.307 113.073 175.787 122.278C176.315 132.351 176.931 144.147 177.532 151.265C162.229 156.14 146.59 161.529 133.939 166.328C134.403 175.489 134.636 180.072 135.099 189.233C149.595 184.611 164.841 179.76 177.428 175.55C178.026 191.839 178.896 208.116 179.753 224.393C167.49 226.092 152.112 228.836 137.263 231.924L138.463 255.609C151.577 253.681 168.122 251.367 182.652 249.142C183.058 256.914 183.477 269.313 184.05 280.249C184.592 290.61 185.453 302.689 185.888 311.037C155.622 311.22 125.357 311.416 95.0897 311.628C94.3262 282.972 92.9969 254.327 91.7228 225.694C90.452 197.133 89.2398 168.555 87.4668 140.014C115.73 123.639 144.894 108.713 174.597 95.1335V95.1318Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M274.793 55.4194C274.93 63.3168 275.555 76.5786 276.065 87.4563C276.626 99.3585 277.281 113.3 277.912 121.742C262.243 125.341 246.198 129.41 233.201 133.18C233.767 144.401 234.052 150.011 234.617 161.231C249.445 157.599 265.015 153.728 277.86 150.271C278.51 169.528 279.437 188.776 280.353 208.019C267.925 209.076 252.331 211.082 237.259 213.506C237.845 225.109 238.138 230.91 238.724 242.511C251.978 240.996 268.689 239.199 283.353 237.383C283.785 246.564 284.244 261.206 284.852 274.129C285.428 286.371 286.329 300.649 286.792 310.511C256.512 310.65 226.233 310.805 195.952 310.974C194.573 274.209 192.57 237.465 190.652 200.728C188.734 164.045 186.941 127.34 184.443 90.6876C214.203 77.8125 244.186 66.1061 274.793 55.416V55.4194Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M344.115 34.6255C408.401 15.2762 404.661 118.782 405.896 154.861C407.316 196.29 422.264 310.893 354.08 310.243C335.005 310.314 315.932 310.389 296.857 310.469C295.417 267.461 293.587 224.446 291.612 181.483C289.628 138.347 287.521 95.1717 284.953 52.0428C304.498 45.6589 324.229 39.8509 344.115 34.6255ZM359.119 166.698C358.579 152.944 361.212 96.7924 341.466 98.5269C339.375 98.711 336.808 99.508 334.727 100.317C335.259 124.93 336.277 149.533 337.282 174.123C338.183 196.141 339.043 218.176 340.219 240.189C342.306 240.398 344.779 240.363 346.911 240.062C367.62 237.139 359.655 180.353 359.118 166.698H359.119Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M547.997 309.813C548.277 275.209 548.331 240.59 548.064 206.01C547.878 181.801 548.505 157.561 548.96 133.339C548.488 133.192 548.252 133.118 547.778 132.973C545.92 155.881 544.07 178.79 541.727 201.656C537.659 237.707 533.644 273.766 529.679 309.829C522.169 309.838 518.413 309.843 510.904 309.853C505.731 273.9 500.477 237.96 495.139 202.031C492.221 180.006 489.633 157.936 487.071 135.867C486.604 136.062 486.371 136.16 485.904 136.356C486.884 160.357 488.365 184.498 488.975 208.351C489.834 241.977 491.024 276.041 492.127 309.883C476.374 309.908 468.497 309.925 452.746 309.958C451.999 260.36 450.892 210.75 449.623 161.184C448.361 111.9 446.928 62.5819 445.355 13.2867C465.678 10.037 486.093 7.38331 506.57 5.32732C510.397 37.5886 513.936 69.8799 517.867 102.129C519.585 121.059 520.864 140.031 522.239 158.987C522.708 158.965 522.942 158.955 523.411 158.935C524.39 139.83 525.209 120.71 526.383 101.615C529.36 68.7163 532.566 35.8222 534.893 2.86951C553.762 1.66572 572.517 0.796784 591.416 0.250977C591.27 51.7025 591.285 103.166 591.446 154.606C591.608 206.32 591.664 258.066 592.65 309.784C574.789 309.789 565.858 309.794 547.997 309.809V309.813Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M699.191 3.65824C698.823 13.024 698.605 28.9496 698.428 42.0088C698.233 56.2985 698.004 73.0411 698.103 83.2591C681.978 81.8443 665.356 80.7176 651.81 80.3258C651.717 94.8265 651.671 102.078 651.578 116.58C666.935 116.957 682.996 117.19 696.223 117.071C695.611 140.204 695.362 163.35 695.056 186.489C682.458 185.238 666.576 184.396 651.15 184.143C651.054 199.138 651.008 206.635 650.912 221.63C664.387 221.787 681.34 222.088 696.204 222.057C696.053 233.077 695.581 250.628 695.37 266.145C695.169 280.845 695.166 297.992 695.004 309.829C664.701 309.799 634.399 309.783 604.097 309.783C604.565 258.165 604.428 206.543 604.364 154.927C604.301 103.315 604.338 51.6943 603.691 0.0820312C635.638 0.147327 667.335 1.33437 699.191 3.65489V3.65824Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M834.204 310.126C835.932 278.201 837.488 246.265 838.705 214.333C839.555 192.056 841.191 169.792 842.684 147.539C842.224 147.326 841.993 147.218 841.533 147.005C838.755 167.916 835.89 188.821 832.6 209.657C826.923 243.111 821.374 276.586 815.888 310.072C808.379 310.051 804.625 310.041 797.116 310.022C793.527 275.052 789.912 240.085 786.269 205.122C784.355 183.314 782.79 161.477 781.263 139.64C780.791 139.752 780.554 139.809 780.081 139.921C779.957 163.493 780.277 187.175 779.843 210.637C779.232 243.599 778.75 276.86 778.343 309.979C762.591 309.942 754.714 309.927 738.961 309.898C740.531 259.552 741.745 209.175 742.793 158.835C743.836 108.753 744.71 58.6293 745.444 8.52051C765.875 11.124 786.229 14.3268 806.472 18.1224C808.782 49.6838 810.847 81.2586 813.318 112.81C814.174 130.966 814.605 149.143 815.131 167.309C815.597 167.355 815.829 167.381 816.295 167.427C818.103 149.615 819.75 131.779 821.756 113.987C826.106 83.934 830.705 53.8995 834.434 23.7596C852.984 27.9452 871.326 32.4255 889.718 37.2625C887.568 82.6147 885.569 127.985 883.717 173.338C881.855 218.961 879.91 264.615 878.843 310.278C860.989 310.213 852.062 310.183 834.204 310.128V310.126Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M945.741 313.915C881.858 313.813 891.313 207.23 892.994 168.487C894.502 133.695 895.905 32.3069 958.119 55.055C1011.95 74.7375 1014.58 142.17 1011.61 190.452C1009.08 231.694 1004.5 314.009 945.739 313.915H945.741ZM964.159 180.35C964.898 164.849 968.566 118.196 955.242 115.234C942.968 112.507 940.601 164.625 940.062 175.884C939.233 193.143 937.76 246.017 948.942 247.013C959.81 247.981 963.406 196.193 964.161 180.351L964.159 180.35Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M1098.59 235.696C1115.8 241.276 1123.48 257.106 1124.45 274.038C1125.13 286.056 1126.32 302.867 1127.3 311.616C1111.21 311.501 1103.16 311.447 1087.06 311.34C1080.88 311.3 1079.34 307.888 1078.86 297.067C1078.31 284.552 1082.46 248.946 1069.23 244.517C1067.05 243.786 1064.71 243.787 1061.99 243.354C1061.26 265.953 1060.48 288.557 1060.75 311.173C1045.05 311.076 1029.34 310.984 1013.63 310.897C1016.12 273.231 1018.23 235.52 1020.19 197.849C1022.15 160.108 1023.96 122.307 1025.39 84.5137C1046.19 93.4006 1066.7 102.962 1086.88 113.179C1117.13 128.101 1130.68 155.683 1129.46 188.42C1128.74 208.007 1124.4 236.004 1098.66 234.182C1098.63 234.787 1098.61 235.09 1098.58 235.694L1098.59 235.696ZM1085.6 182.849C1086.77 159.735 1083.21 154.262 1074.75 150.982C1073.19 150.377 1066.85 147.836 1066.49 148.094C1063.16 150.449 1064.51 186.015 1063.76 204.986C1066.22 205.874 1069.37 206.654 1072.97 207.56C1081.06 209.599 1084.53 203.863 1085.6 182.848V182.849Z"
+                        fill="#042F1A"></path>
+                    <path
+                        d="M1224 196.32C1223.79 199.731 1223.79 205.778 1223.79 210.734C1223.79 216.157 1223.79 222.515 1224 226.492C1209.64 218.918 1194.72 211.395 1182.48 205.607C1182.28 212.331 1182.19 215.693 1182 222.418C1196.1 227.994 1210.74 233.889 1222.72 238.779C1222.5 244.922 1222.48 258.196 1222.47 265.221C1210.63 261.663 1195.69 257.469 1181.1 253.747C1180.9 260.7 1180.8 264.176 1180.6 271.129C1193.55 273.455 1209.81 276.477 1224 279.102C1224 283.279 1223.78 289.903 1223.77 295.791C1223.77 301.37 1224 307.884 1224 312.371C1193.75 312.12 1163.5 311.882 1133.25 311.661C1134.98 283.509 1136.16 255.319 1137.38 227.145C1138.6 198.902 1139.89 170.645 1140.62 142.379C1169.27 158.947 1197.09 177.056 1224 196.322V196.32Z"
+                        fill="#042F1A"></path>
+                </g>
+                <defs>
+                    <clipPath id="clip0_816_18455">
+                        <rect width="1224" height="313.829" fill="white" transform="translate(0 0.0849609)"></rect>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+    </div>
+    <div class="content_form">
+        <input type="text" id="name" placeholder="FULL NAME" height="20vw" width="100%">
+        <input type="text" id="name" placeholder="EMAIL ADDRESS">
+        <button class="btnl">SIGN UP</button>
+    </div>
+    <div class="social_part">
+        <div class="icons">
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                        fill="currentColor">
+                        <path
+                            d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z">
+                        </path>
+                    </svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                        fill="currentColor">
+                        <path
+                            d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47062 14 5.5 16 5.5H17.5V2.1401C17.1743 2.09685 15.943 2 14.6429 2C11.9284 2 10 3.65686 10 6.69971V9.5H7V13.5H10V22H14V13.5Z">
+                        </path>
+                    </svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                        fill="currentColor">
+                        <path
+                            d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z">
+                        </path>
+                    </svg></li>
+                <li>
+                    <p>Privacy policy</p>
+                </li>
+            </ul>
+        </div>
+        <div class="txt-blocks">
+            <p class="site-credit caps">© Eat Curious 2024</p>
+            <p class="site-credit site-credit--fiasco caps"><a href="https://fiasco.design" target="_blank"
+                    rel="nofollow" class="cursor-hover">|Designed by Fiasco Design|</a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="ticker">
+    <div class="ticker_tape">
+        <marquee behavior="normal" direction="left" scrollment="">
+            <span>100% Plant BASED
+                <em><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg></em>
+            </span>
+            <span>DAIRY FREE
+
+                <em><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg></em>
+
+            </span>
+            <span>PACKED WITH FLAVOUR
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+            <span>100% Plant
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+            <span>DAIRY FREE
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+            <span>PACKED WITH FLAVOUR
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+            <span>100% Plant
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+            <span>DAIRY FREE
+                <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M12.9442 5.08708C13.9289 2.90129 12.1642 0 10.0528 0C9.71743 0 9.37358 0.0727141 9.02973 0.234139C8.69299 0.391202 8.37756 0.616615 8.17153 0.932194C7.64155 1.74659 7.87031 2.99436 8.34914 2.99436H8.36051C8.6873 2.97982 8.80097 2.87511 8.82086 2.32976C8.72993 1.32194 9.2727 0.884203 9.94335 0.884203C10.4705 0.884203 11.0772 1.1547 11.5162 1.6317C12.2423 2.42283 12.6401 3.6866 12.0576 4.9242C11.5759 4.82821 11.1553 4.78604 10.7902 4.78604C7.96409 4.78604 8.51396 7.31794 10.2005 7.31794C10.8527 7.31794 11.6754 6.93983 12.5378 5.89275C13.953 6.02945 16.5745 8.31994 13.9701 9.01073C13.3889 7.69169 12.6899 7.22341 12.1016 7.22341C11.6711 7.22341 11.3003 7.47355 11.0772 7.82403C10.5458 8.66024 10.8598 10.0709 13.136 10.0709C13.1943 10.0709 13.2525 10.0709 13.3122 10.0694C14.1633 12.597 11.4438 15.0765 9.13346 15.0765C8.09338 15.0765 7.13714 14.5748 6.62421 13.3503C11.0331 11.4059 10.0357 9.04999 8.37898 9.04999C7.30907 9.04999 5.96351 10.0331 5.62392 12.7482C4.75435 13.1482 3.97004 13.3227 3.30223 13.3227C0.575597 13.3227 -0.194511 10.4272 3.16015 8.34757C4.23858 9.01654 5.1181 9.27395 5.79159 9.27395C7.98966 9.27395 7.99676 6.53554 5.63245 6.53554C5.00158 6.53554 4.20164 6.73041 3.22835 7.22632C1.29029 5.73859 2.43551 3.51209 4.33804 3.51209C4.63216 3.51209 4.94475 3.5659 5.26729 3.68369C5.22608 5.57426 6.16243 6.25777 7.07178 6.25777C7.29486 6.25777 7.51793 6.2156 7.72396 6.14143C8.64041 5.80404 9.47304 4.13452 6.62279 3.09616C7.1343 2.58135 6.86149 2.21342 6.44944 2.21342C6.17095 2.21342 5.82995 2.38066 5.62392 2.78786C5.18914 2.62789 4.76288 2.55663 4.36078 2.55663C1.75207 2.55517 0.0569832 5.57862 2.37583 7.73241C-1.52586 10.3559 -0.197354 14.2839 3.29655 14.2839C4.03113 14.2839 4.8595 14.1109 5.75607 13.7168C6.11696 15.0213 7.38011 15.8051 8.65462 15.9636C8.85497 15.9884 9.05389 16 9.24997 16C12.2935 16 14.932 13.09 14.24 9.92692C17.6345 9.0369 15.516 5.44192 12.9442 5.08708ZM10.2446 6.42647C9.52135 6.42647 9.26559 5.75023 10.6154 5.65715C10.695 5.65134 10.7746 5.64843 10.8541 5.64843C11.0687 5.64843 11.2846 5.66733 11.4964 5.69933C11.5248 5.70369 11.5546 5.70805 11.583 5.71242C11.117 6.24614 10.6183 6.42647 10.2446 6.42647ZM11.7564 8.76204C11.6541 8.55844 11.6711 8.23996 11.8857 8.11343C11.9368 8.08289 11.9908 8.07126 12.0434 8.07126C12.0576 8.07126 12.0704 8.07271 12.0832 8.07417C12.3176 8.10035 12.562 8.34466 12.697 8.49736C12.8078 8.62389 12.9058 8.7635 12.9968 8.90602C13.0451 8.98164 13.092 9.05872 13.1389 9.13579C13.1559 9.16488 13.2326 9.29722 13.2639 9.34957C12.7439 9.29867 11.9922 9.23905 11.7564 8.76204ZM5.70491 7.50991C5.85552 7.50991 6.00045 7.52445 6.1397 7.5579C6.34714 7.60589 6.50344 7.80222 6.47786 8.01891C6.45229 8.24577 6.24626 8.32867 5.96493 8.32867C5.4108 8.32867 4.56112 8.00873 4.18885 7.83276C4.67905 7.66552 5.21329 7.50991 5.70491 7.50991ZM6.16385 4.08944C6.16385 4.07199 6.16527 4.05454 6.16669 4.03854C6.16953 3.99346 6.1738 3.95419 6.17806 3.94546C6.52759 4.13888 6.9297 4.20578 7.28633 4.3832C7.51651 4.49664 7.7197 4.68279 7.69554 4.96346C7.67565 5.20778 7.4682 5.40265 7.22808 5.40265H7.1954C6.93822 5.38375 6.71799 5.22523 6.54748 5.04199C6.33151 4.81222 6.19085 4.51263 6.16101 4.19851C6.16101 4.18978 6.16101 4.14179 6.16385 4.08944ZM8.28378 10.0098C8.32498 9.99818 8.36761 9.99382 8.41024 9.99382C8.56369 9.99382 8.7143 10.0636 8.79671 10.2018C9.22581 10.9129 7.1343 11.9905 6.59579 12.3018C6.76061 11.3652 7.38295 10.241 8.28378 10.0098Z"
+                            fill="#042F1A" />
+                    </svg>
+                </em>
+            </span>
+        </marquee>
+    </div>
+</div>
+
+<span id="sticker">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 306" fill="none">
+        <circle cx="153.708" cy="152.916" r="152.826" transform="rotate(6.47273 153.708 152.916)" fill="#D4ED6D" />
+        <path
+            d="M35.8571 176.867C37.0771 175.807 40.1171 174.777 46.2571 173.267C52.3171 171.777 55.2171 171.347 56.8371 171.717C58.3171 172.037 59.1471 172.957 59.5371 174.547C59.9171 176.097 59.5771 177.347 58.4471 178.307C57.2271 179.367 54.4071 180.337 48.3471 181.827C42.0571 183.367 39.1171 183.807 37.4671 183.457C36.0571 183.117 35.2271 182.197 34.8371 180.607C34.4471 179.017 34.7571 177.817 35.8471 176.867H35.8571Z"
+            fill="#042F1A" />
+        <path
+            d="M50.8377 183.438C52.1677 182.978 52.9877 183.688 54.5377 183.148C55.6477 182.768 55.6577 181.728 57.6777 181.028C59.7377 180.318 61.5577 180.918 62.3877 183.318C63.1677 185.568 62.0177 187.488 59.0677 188.508C54.8677 189.968 51.0377 188.688 49.9577 185.558C49.5477 184.378 50.0577 183.708 50.8377 183.438Z"
+            fill="#042F1A" />
+        <path
+            d="M42.4479 199.016C43.8279 197.416 46.1779 195.806 48.8579 194.276C51.7679 192.616 53.9179 191.566 55.5679 191.166C57.4679 190.796 58.6179 191.396 59.3579 192.686C60.0179 193.836 59.9479 194.816 59.3179 195.766C58.9479 196.296 58.8379 196.576 59.0179 196.886C59.1379 197.086 59.4179 197.196 59.9479 197.346C61.5879 197.626 62.7879 198.466 63.8279 200.296C64.7579 201.926 64.9379 203.346 64.3179 204.686C64.0479 205.246 63.9279 205.576 64.1079 205.886C64.2279 206.086 64.4879 206.166 65.0579 206.286C66.7879 206.556 67.9979 207.576 69.0979 209.506C71.2479 213.266 68.8679 216.736 64.6379 219.156C61.6279 220.876 58.7779 222.416 56.3979 223.056C54.8279 223.366 53.7079 223.056 52.6979 221.306C51.5579 219.306 52.3779 217.756 53.7779 216.916C54.7779 216.306 56.1479 215.566 57.5179 214.826C58.5179 214.296 59.5179 213.776 60.4379 213.246C61.7879 212.476 62.3279 211.446 61.7679 210.466C61.3079 209.656 59.8479 208.996 58.0579 210.026C56.9779 210.646 56.0779 211.206 55.1879 211.756C54.1879 212.366 53.2279 212.966 52.1079 213.606C50.0379 214.786 48.4779 213.926 47.5279 212.276C46.2479 210.046 47.0979 208.526 48.4979 207.686C49.5279 207.056 50.8979 206.316 52.3079 205.556C53.2779 205.046 54.2779 204.516 55.1579 204.016C56.5079 203.246 57.0279 202.186 56.4679 201.206C56.0079 200.396 54.6079 199.756 52.8079 200.776C50.6779 201.996 48.9079 203.226 46.8479 204.406C44.7779 205.586 43.2179 204.726 42.3279 203.176C41.3179 201.416 41.5779 200.146 42.4479 199.066V199.016Z"
+            fill="#042F1A" />
+        <path
+            d="M70.7875 230.647C72.1875 226.687 74.5975 222.197 76.8875 219.687C79.1275 217.237 80.9775 216.137 83.4575 218.397C85.2475 220.027 84.8875 221.867 82.9975 224.797C81.5275 227.157 80.6775 228.487 79.4775 230.617C78.3075 232.717 78.0975 233.637 78.4075 233.927C78.7575 234.247 79.6175 233.927 81.6275 232.597C83.6575 231.177 84.8875 230.237 87.1375 228.597C89.8875 226.457 91.6575 225.907 93.4675 227.567C95.9475 229.827 94.9775 231.747 92.7475 234.197C90.4575 236.697 86.2275 239.547 82.4075 241.287C77.4075 243.697 73.5375 244.117 71.1475 241.937C68.7275 239.727 68.7975 235.827 70.7775 230.667L70.7875 230.647Z"
+            fill="#042F1A" />
+        <path
+            d="M87.6064 242.737C89.8064 239.147 94.9563 235.347 101.116 239.117C105.806 241.987 106.456 246.087 104.026 250.047C102.686 252.247 101.056 252.667 99.0564 251.437C97.0964 250.237 94.8164 248.797 93.4864 247.987C92.9864 247.687 92.7364 247.797 92.5264 248.137C92.0764 248.867 92.1564 250.377 94.2864 251.687C95.6464 252.517 96.8964 252.877 98.5964 253.907C100.096 254.827 100.336 256.067 99.5463 257.367C98.3663 259.297 95.6763 259.577 91.3864 256.947C84.5964 252.797 85.3564 246.397 87.5964 242.737H87.6064ZM99.5763 246.407C100.146 245.477 99.9564 244.217 98.5964 243.377C97.1364 242.477 95.7063 242.937 95.1363 243.867C94.7863 244.437 94.9763 244.727 97.0663 246.007C98.7964 247.067 99.1864 247.027 99.5664 246.397L99.5763 246.407Z"
+            fill="#042F1A" />
+        <path
+            d="M102.037 264.287C102.677 262.567 104.357 262.327 105.957 262.927C107.277 263.417 108.807 264.537 110.457 265.157C112.247 265.827 113.547 265.357 114.067 263.967C114.277 263.417 113.987 263.067 113.547 262.897C112.487 262.497 111.217 262.777 109.577 262.157C105.227 260.527 103.767 256.647 105.517 251.977C107.387 246.977 111.687 244.957 115.627 246.437C117.267 247.057 118.127 247.877 118.687 249.497C118.827 250.007 119.017 250.287 119.307 250.397C119.637 250.517 119.967 250.307 120.547 249.867C121.297 249.187 122.117 248.997 123.477 249.507C124.897 250.037 125.267 251.057 125.187 252.607C124.847 255.647 123.797 258.877 122.077 263.477C119.727 269.757 115.617 273.387 108.237 270.627C102.797 268.587 101.217 266.457 102.027 264.307L102.037 264.287ZM117.167 256.457C117.847 254.627 117.137 253.317 115.637 252.757C113.957 252.127 112.547 252.887 111.907 254.607C111.317 256.177 111.877 257.677 113.487 258.277C114.987 258.837 116.477 258.307 117.167 256.447V256.457Z"
+            fill="#042F1A" />
+        <path
+            d="M126.327 260.787C127.307 254.547 131.227 251.447 135.357 252.097C136.937 252.347 138.127 253.087 138.927 254.477C139.167 254.947 139.327 255.177 139.717 255.237C140.027 255.287 140.297 255.057 140.777 254.497C141.467 253.617 142.297 253.357 143.527 253.547C145.227 253.817 145.727 254.647 146.017 256.027C146.367 258.057 146.207 260.877 145.727 263.877C145.197 267.227 144.637 269.547 143.957 271.097C143.077 272.897 141.847 273.487 140.417 273.267C139.067 273.057 138.347 272.347 138.017 271.197C137.797 270.567 137.647 270.307 137.337 270.257C137.067 270.217 136.807 270.367 136.397 270.697C135.117 271.837 133.737 272.297 132.077 272.027C128.077 271.317 125.307 267.097 126.307 260.777L126.327 260.787ZM138.827 262.637C139.207 260.247 137.787 258.957 136.437 258.747C134.667 258.467 133.377 259.607 133.047 261.727C132.707 263.887 133.577 265.407 135.347 265.677C136.697 265.887 138.437 265.097 138.827 262.627V262.637Z"
+            fill="#042F1A" />
+        <path
+            d="M150.536 271.917C149.796 269.997 149.406 267.157 149.286 264.127C149.136 260.387 149.316 258.037 149.746 256.337C150.346 254.787 151.296 254.087 152.656 254.037C153.986 253.987 154.856 254.457 155.366 255.487C155.706 256.057 155.906 256.287 156.216 256.277C156.486 256.267 156.716 256.057 157.046 255.657C158.126 254.247 159.386 253.607 161.486 253.527C165.776 253.357 167.756 257.057 167.956 261.967C168.096 265.437 168.116 268.677 167.546 271.077C167.136 272.617 166.356 273.467 164.326 273.547C162.026 273.637 161.036 272.197 160.966 270.557C160.876 269.387 160.856 267.867 160.836 266.307C160.786 265.177 160.786 264.007 160.736 262.957C160.676 261.397 159.966 260.447 158.836 260.497C157.936 260.537 156.696 261.517 156.776 263.587C156.876 266.007 157.196 268.177 157.296 270.517C157.396 272.897 155.876 273.897 154.116 273.967C152.046 274.047 151.086 273.267 150.516 271.927L150.536 271.917Z"
+            fill="#042F1A" />
+        <path
+            d="M180.276 268.148C179.196 266.348 178.006 262.878 176.876 258.938C175.786 255.108 175.036 251.638 174.976 249.588C174.926 247.128 176.046 245.958 181.566 244.388C186.596 242.958 189.036 243.428 189.796 246.098C190.236 247.638 189.666 249.338 187.456 249.968C186.706 250.178 184.996 250.588 183.946 250.888C183.276 251.078 182.946 251.378 183.396 252.948C183.826 254.448 184.136 254.558 184.856 254.358C186.016 254.028 186.636 253.768 187.796 253.438C189.976 252.818 191.196 253.558 191.826 255.778C192.406 257.808 191.516 259.518 189.296 260.148C188.696 260.318 187.856 260.518 187.226 260.698C186.626 260.868 186.456 261.278 186.606 261.808C186.656 261.998 187.636 265.288 187.796 265.848C188.186 267.198 188.036 269.108 185.226 269.908C182.566 270.668 181.396 270.148 180.266 268.158L180.276 268.148Z"
+            fill="#042F1A" />
+        <path
+            d="M197.908 262.558C197.038 261.578 196.118 259.988 194.778 256.998C193.458 254.038 192.628 251.508 192.398 249.568C192.118 247.518 192.548 246.468 193.648 245.978C194.608 245.548 195.118 245.828 195.488 246.178C195.968 246.778 196.178 246.858 196.458 246.728C196.748 246.598 196.958 246.418 197.128 246.128C197.618 244.928 198.048 243.878 199.368 243.288C201.428 242.368 202.768 243.818 203.628 245.738C204.538 247.768 204.358 249.558 203.178 250.078C202.818 250.238 202.318 250.248 201.888 250.438C201.038 250.818 200.298 252.128 201.248 254.268C201.918 255.768 203.178 256.948 204.098 259.018C205.198 261.478 204.508 262.978 202.758 263.758C200.838 264.618 199.368 264.288 197.908 262.548V262.558Z"
+            fill="#042F1A" />
+        <path
+            d="M201.138 237.656C200.288 236.216 200.758 234.706 202.468 233.696C204.218 232.666 205.728 232.996 206.578 234.446C207.408 235.856 206.968 237.336 205.228 238.366C203.518 239.376 201.978 239.066 201.138 237.656ZM212.718 257.046C211.398 256.196 209.738 253.596 207.768 250.276C205.928 247.156 204.318 244.206 204.178 242.656C204.098 241.436 204.688 240.456 205.998 239.676C207.308 238.906 208.428 238.876 209.468 239.576C210.838 240.446 212.538 243.246 214.378 246.366C216.358 249.726 217.838 252.386 217.988 254.016C218.088 255.176 217.468 256.136 216.158 256.906C214.818 257.696 213.728 257.706 212.708 257.036L212.718 257.046Z"
+            fill="#042F1A" />
+        <path
+            d="M216.788 245.146C214.168 241.846 212.388 235.696 218.038 231.216C222.348 227.796 226.418 228.606 229.298 232.246C230.898 234.266 230.728 235.936 228.898 237.386C227.098 238.816 224.958 240.456 223.738 241.426C223.278 241.786 223.298 242.066 223.548 242.376C224.078 243.046 225.528 243.496 227.488 241.946C228.738 240.956 229.498 239.906 231.058 238.666C232.438 237.576 233.688 237.776 234.628 238.966C236.038 240.736 235.368 243.356 231.428 246.476C225.198 251.416 219.448 248.506 216.788 245.146ZM224.358 235.166C223.678 234.306 222.428 234.056 221.178 235.046C219.838 236.116 219.768 237.606 220.448 238.456C220.858 238.976 221.198 238.906 223.128 237.376C224.718 236.116 224.818 235.736 224.358 235.156V235.166Z"
+            fill="#042F1A" />
+        <path
+            d="M239.496 236.396C237.586 235.626 235.256 233.966 232.956 231.976C230.126 229.526 228.536 227.786 227.596 226.306C226.886 224.806 227.016 223.636 227.916 222.606C228.786 221.606 229.726 221.286 230.836 221.626C231.486 221.776 231.786 221.776 231.996 221.546C232.176 221.336 232.176 221.036 232.116 220.516C231.826 218.766 232.226 217.416 233.606 215.816C236.416 212.576 240.476 213.666 244.186 216.876C246.806 219.146 249.176 221.356 250.546 223.416C251.386 224.766 251.476 225.916 250.146 227.456C248.636 229.196 246.906 228.936 245.666 227.866C244.756 227.126 243.636 226.106 242.476 225.056C241.626 224.316 240.766 223.516 239.966 222.836C238.786 221.816 237.616 221.676 236.876 222.536C236.286 223.216 236.156 224.796 237.716 226.156C239.546 227.736 241.346 228.986 243.116 230.526C244.916 232.086 244.606 233.876 243.456 235.196C242.106 236.756 240.876 236.926 239.506 236.416L239.496 236.396Z"
+            fill="#042F1A" />
+        <path
+            d="M246.696 215.237C241.846 212.487 239.616 208.177 241.836 204.277C242.716 202.717 243.666 201.997 245.056 201.527C245.396 201.407 245.556 201.357 245.726 201.057C245.846 200.857 245.716 200.597 245.236 200.337C244.526 199.937 243.326 199.347 242.346 198.787C240.176 197.557 239.836 196.247 240.876 194.417C241.916 192.587 243.406 192.177 245.666 192.917C248.926 194.047 252.516 195.947 255.906 197.867C259.406 199.847 261.526 201.317 262.756 202.467C264.116 203.957 264.256 205.287 263.536 206.547C262.866 207.737 261.916 208.137 260.746 208.067C260.106 208.017 259.806 208.067 259.646 208.337C259.516 208.577 259.586 208.837 259.756 209.337C260.336 210.917 260.246 212.437 259.416 213.897C257.346 217.387 252.456 218.517 246.686 215.247L246.696 215.237ZM253.046 204.267C250.976 203.097 249.236 204.037 248.576 205.187C247.676 206.787 248.306 208.357 250.136 209.387C252.006 210.447 253.706 210.197 254.616 208.607C255.266 207.457 255.176 205.477 253.046 204.267Z"
+            fill="#042F1A" />
+        <path
+            d="M264.297 196.737C261.887 196.617 258.317 195.467 255.107 194.257C252.187 193.147 249.027 191.917 246.407 190.247C244.547 188.997 243.947 187.607 244.667 185.707C245.467 183.587 246.807 183.267 249.537 184.297C251.897 185.107 254.727 186.347 257.187 187.447C258.827 188.197 260.327 188.847 261.417 189.257C262.767 189.767 263.307 189.557 263.847 188.797C264.327 187.977 264.997 187.737 266.537 188.317C268.397 189.027 270.127 190.727 268.967 193.787C268.127 196.007 266.347 196.837 264.307 196.737H264.297Z"
+            fill="#042F1A" />
+        <path
+            d="M272.477 188.077C270.807 187.707 270.207 186.257 270.527 184.807C270.837 183.437 271.357 182.877 271.667 181.507C271.976 180.137 271.707 179.557 270.977 179.397C269.717 179.117 268.667 181.517 264.597 183.087C262.417 183.917 259.007 184.317 256.157 183.687C253.687 183.137 252.217 182.167 252.787 179.617C253.357 177.067 256.277 176.517 264.107 176.147C264.737 176.167 264.887 176.047 264.937 175.817C264.987 175.587 264.917 175.377 264.367 175.127C257.977 172.067 254.827 170.407 255.477 167.507C256.037 164.997 257.787 164.867 260.377 165.437C263.307 166.087 268.237 168.707 272.127 171.697C276.537 175.037 278.726 178.647 277.667 183.407C276.906 186.837 274.937 188.677 272.467 188.087L272.477 188.077Z"
+            fill="#042F1A" />
+        <path
+            d="M54.1275 131.534C50.5575 130.714 45.0175 129.044 43.0375 128.594C41.9375 128.344 41.7175 128.574 41.5175 129.124C41.0375 130.174 40.1075 130.404 38.8475 130.114C35.2775 129.294 34.1175 125.944 34.8275 122.874C35.3475 120.594 36.6475 119.654 38.7075 119.564C41.1075 119.564 44.3175 120.214 48.3175 121.124C52.6475 122.114 55.8975 122.984 58.0075 124.064C59.7075 125.014 60.2775 126.384 59.7975 128.474C59.1575 131.254 57.7075 132.354 54.1275 131.534Z"
+            fill="#042F1A" />
+        <path
+            d="M48.6678 118.034C41.4378 115.004 38.7578 109.004 41.1678 103.254C43.5778 97.5041 49.7678 95.0641 56.9878 98.0941C64.3578 101.184 67.3078 107.464 64.8978 113.214C62.4978 118.934 55.9978 121.114 48.6678 118.034ZM53.9778 105.084C51.3178 103.964 49.1678 104.464 48.3978 106.294C47.6578 108.054 48.8278 109.904 51.4878 111.014C54.2878 112.194 56.5178 111.814 57.2778 110.014C58.0478 108.184 56.7778 106.254 53.9778 105.074V105.084Z"
+            fill="#042F1A" />
+        <path
+            d="M58.5076 95.4654C52.1276 90.9054 50.8376 84.4754 54.4576 79.3954C58.0876 74.3154 64.6576 73.3054 71.0376 77.8654C77.5376 82.5154 79.0376 89.2854 75.4076 94.3654C71.8076 99.4154 64.9876 100.095 58.5076 95.4754V95.4654ZM66.5476 84.0054C64.1976 82.3254 61.9876 82.3354 60.8376 83.9554C59.7276 85.5054 60.4576 87.5654 62.8076 89.2454C65.2876 91.0154 67.5376 91.1454 68.6776 89.5554C69.8376 87.9354 69.0276 85.7754 66.5476 84.0054Z"
+            fill="#042F1A" />
+        <path
+            d="M68.8968 70.9548C66.0768 67.6648 66.7268 63.9248 69.5368 61.5148C72.3168 59.1248 76.2068 58.9248 79.0468 62.2448C81.7668 65.4148 81.1568 69.4348 78.3668 71.8148C75.5568 74.2248 71.6068 74.1248 68.8868 70.9548H68.8968ZM75.4068 65.4248C74.6168 64.5048 73.5768 64.3748 72.6868 65.1348C71.9168 65.7948 71.8368 66.8948 72.6168 67.8148C73.4268 68.7648 74.4468 68.8648 75.2768 68.1548C76.1668 67.3948 76.2168 66.3748 75.4068 65.4248ZM80.0868 84.1248C78.9468 82.7948 78.6668 80.6648 78.8568 77.0048C79.1068 73.3448 79.8068 71.0448 81.1468 69.9048C82.4168 68.8148 83.5268 68.8448 84.4868 69.9648C85.5768 71.2348 86.0568 73.7048 85.9368 77.4648C85.8568 80.6648 85.3168 82.9748 83.8668 84.2248C82.5668 85.3448 81.2068 85.4348 80.0868 84.1348V84.1248ZM81.2568 64.1648C80.0868 62.8048 79.6268 60.1648 79.8368 56.2848C80.0468 53.2348 80.5368 51.0548 81.8768 49.9148C83.1768 48.7948 84.5668 48.7348 85.6868 50.0448C86.7268 51.2548 87.0268 53.1648 86.8968 56.6648C86.7968 60.5048 86.0768 63.0148 84.6268 64.2648C83.3568 65.3548 82.2268 65.2948 81.2568 64.1748V64.1648ZM86.7368 71.7448C83.9168 68.4548 84.5868 64.7448 87.3668 62.3648C90.2368 59.9048 94.0668 59.7548 96.8868 63.0348C99.6568 66.2648 99.0968 70.2848 96.2568 72.7248C93.4768 75.1148 89.5068 74.9748 86.7368 71.7448ZM93.2468 66.2148C92.4868 65.3248 91.4968 65.2548 90.6668 65.9648C89.8668 66.6548 89.7068 67.7148 90.4668 68.6048C91.3068 69.5848 92.4068 69.6648 93.2368 68.9548C94.0968 68.2148 94.0868 67.1948 93.2568 66.2148H93.2468Z"
+            fill="#042F1A" />
+        <path
+            d="M105.618 61.7444C103.988 59.2244 102.448 56.1544 101.408 53.8044C100.348 51.4144 99.138 48.4144 98.358 45.3844C97.728 42.4244 99.108 40.9144 104.488 38.5244C110.258 35.9644 115.218 37.1344 117.628 42.5444C120.038 47.9544 117.578 52.4244 112.618 54.6244L111.618 55.0644C111.118 55.2844 111.148 55.7444 111.358 56.2044C111.798 57.2044 112.138 57.7744 112.778 59.2044C113.488 60.8044 113.558 62.3944 111.208 63.4444C108.928 64.4544 107.288 64.1244 105.628 61.7344L105.618 61.7444ZM111.148 45.8444C110.408 44.1744 109.028 44.1444 106.748 45.1544C105.928 45.5144 105.778 45.7544 106.888 48.2544C107.678 50.0344 107.928 50.2244 108.758 49.8644C111.078 48.8344 111.898 47.5244 111.158 45.8544L111.148 45.8444Z"
+            fill="#042F1A" />
+        <path
+            d="M125.067 54.385C123.757 52.355 122.587 48.795 121.697 45.475C120.887 42.465 120.037 39.175 119.847 36.075C119.767 33.835 120.547 32.535 122.507 32.005C124.697 31.415 125.737 32.305 126.497 35.125C127.217 37.515 127.877 40.535 128.427 43.165C128.777 44.925 129.137 46.535 129.437 47.655C129.817 49.045 130.297 49.365 131.227 49.355C132.167 49.265 132.767 49.665 133.187 51.245C133.707 53.165 133.337 55.565 130.177 56.415C127.877 57.035 126.167 56.085 125.057 54.365L125.067 54.385Z"
+            fill="#042F1A" />
+        <path
+            d="M132.777 44.9557C132.087 38.6757 135.057 34.6657 139.207 34.2057C140.797 34.0357 142.137 34.4357 143.277 35.5657C143.637 35.9557 143.847 36.1257 144.237 36.0857C144.547 36.0557 144.747 35.7557 145.067 35.0957C145.507 34.0657 146.237 33.5957 147.477 33.4557C149.187 33.2657 149.887 33.9357 150.537 35.1957C151.407 37.0657 151.987 39.8257 152.317 42.8457C152.687 46.2157 152.757 48.6057 152.507 50.2757C152.137 52.2357 151.097 53.1357 149.657 53.2957C148.297 53.4457 147.427 52.9557 146.797 51.9257C146.427 51.3757 146.207 51.1657 145.897 51.2057C145.627 51.2357 145.417 51.4557 145.107 51.8757C144.167 53.3157 142.957 54.1157 141.297 54.2957C137.257 54.6657 133.477 51.3157 132.777 44.9557ZM145.317 43.4557C145.057 41.0557 143.347 40.1857 141.987 40.3357C140.207 40.5357 139.267 41.9657 139.497 44.1057C139.737 46.2757 140.967 47.5157 142.757 47.3157C144.117 47.1657 145.587 45.9457 145.317 43.4657V43.4557Z"
+            fill="#042F1A" />
+        <path
+            d="M155.508 50.8154C155.028 48.8154 155.008 45.9554 155.288 42.9254C155.628 39.1954 156.118 36.8954 156.768 35.2654C157.568 33.8154 158.598 33.2354 159.958 33.3654C161.278 33.4854 162.088 34.0654 162.458 35.1554C162.718 35.7654 162.888 36.0154 163.198 36.0454C163.468 36.0654 163.718 35.8954 164.108 35.5454C165.358 34.2854 166.688 33.8254 168.788 34.0154C173.058 34.4054 174.538 38.3354 174.098 43.2354C173.778 46.6954 173.368 49.9054 172.498 52.2154C171.888 53.6854 171.008 54.4254 168.988 54.2454C166.698 54.0354 165.898 52.4754 166.048 50.8454C166.118 49.6754 166.298 48.1654 166.478 46.6154C166.578 45.4854 166.728 44.3254 166.818 43.2754C166.958 41.7254 166.388 40.6954 165.258 40.5854C164.368 40.5054 162.998 41.3154 162.808 43.3754C162.588 45.7854 162.618 47.9754 162.408 50.3054C162.188 52.6754 160.548 53.4654 158.808 53.3054C156.748 53.1154 155.888 52.2154 155.508 50.8154Z"
+            fill="#042F1A" />
+        <path
+            d="M177.348 48.4547C177.968 46.1947 178.438 44.9147 178.758 43.7447C178.918 43.1447 178.838 42.7147 178.428 42.4447C177.688 42.0447 176.798 41.1547 177.448 38.7747C178.018 36.7047 179.338 36.0147 180.618 36.3647C181.028 36.4747 181.258 36.3747 181.588 35.6147C181.718 35.2847 181.848 34.9547 181.968 34.6647C182.628 33.1447 183.888 32.8047 185.438 33.2247C187.358 33.7447 187.938 34.7147 187.708 37.4847C187.668 38.0747 187.768 38.3047 188.368 38.4747L189.878 38.8847C191.648 39.3647 192.588 40.3547 191.938 42.7247C191.248 45.2447 189.738 45.6047 188.158 45.1647L186.538 44.7247C186.128 44.6147 185.868 44.6647 185.748 45.1147C185.448 46.0847 185.188 47.0247 184.998 47.7047C184.928 47.9647 184.898 48.2047 184.858 48.3547C184.378 50.1247 184.958 50.8047 185.938 51.0747C186.578 51.2447 186.838 51.1947 187.318 51.3347C188.748 51.7247 189.378 52.8247 188.858 54.7147C188.228 57.0047 186.318 58.5447 181.988 57.3647C177.168 56.0447 176.218 52.5947 177.348 48.4547Z"
+            fill="#042F1A" />
+        <path
+            d="M195.757 58.0548C196.317 55.8648 197.627 53.1148 199.627 49.5448C201.457 46.2748 203.107 43.8048 204.617 42.1448C206.597 40.0348 208.577 40.0248 214.117 43.1248C221.027 46.9948 221.667 50.9648 219.947 54.0248C218.667 56.3048 217.237 57.1948 215.207 57.2248C214.557 57.2648 214.247 57.2648 214.107 57.5048C213.977 57.7448 214.087 57.9448 214.537 58.4148C216.137 60.3348 216.397 62.2748 215.047 64.6848C213.237 67.9148 208.837 69.4748 202.097 65.7048C196.137 62.3748 194.977 60.7848 195.747 58.0448L195.757 58.0548ZM208.827 60.0048C209.567 58.6748 208.777 57.2948 206.127 55.8148C204.897 55.1248 204.587 55.2148 204.067 56.1348C203.747 56.7148 203.457 57.2248 203.167 57.8248C202.497 59.1048 202.687 59.4748 204.557 60.5248C206.397 61.5548 208.007 61.4748 208.827 60.0048ZM212.857 51.7548C213.597 50.4248 212.967 49.3148 211.137 48.2848C209.537 47.3848 209.117 47.4248 208.477 48.4948C208.217 48.8848 207.937 49.3048 207.647 49.8148C207.127 50.7348 207.267 51.1248 208.397 51.7548C210.607 52.9948 212.277 52.8048 212.867 51.7548H212.857Z"
+            fill="#042F1A" />
+        <path
+            d="M218.097 63.2841C222.267 58.5341 227.237 58.0241 230.367 60.7741C231.567 61.8241 232.177 63.0841 232.117 64.6941C232.067 65.2241 232.087 65.4941 232.377 65.7541C232.617 65.9641 232.967 65.9141 233.677 65.6941C234.727 65.3241 235.577 65.5441 236.507 66.3641C237.797 67.4941 237.777 68.4641 237.277 69.7941C236.487 71.6941 234.837 73.9841 232.837 76.2741C230.597 78.8241 228.877 80.4841 227.477 81.4341C225.777 82.4841 224.407 82.3241 223.327 81.3741C222.297 80.4741 222.067 79.4941 222.407 78.3341C222.557 77.6841 222.567 77.3841 222.327 77.1741C222.127 76.9941 221.817 76.9841 221.297 77.0441C219.597 77.3241 218.197 76.9641 216.937 75.8641C213.937 73.1241 213.867 68.0741 218.087 63.2741L218.097 63.2841ZM227.667 71.5341C229.267 69.7141 228.757 67.8741 227.727 66.9741C226.377 65.7941 224.687 66.0641 223.267 67.6741C221.827 69.3141 221.747 71.0641 223.097 72.2441C224.127 73.1441 226.017 73.4141 227.667 71.5341Z"
+            fill="#042F1A" />
+        <path
+            d="M228.377 82.495C229.747 81.395 231.097 82.215 232.057 83.095C233.687 84.685 234.717 85.605 235.517 84.975C237.097 83.705 233.067 79.245 237.327 75.825C240.517 73.265 244.947 75.415 247.807 78.965C249.737 81.365 249.537 82.925 248.167 84.025C246.887 85.055 245.667 84.525 244.767 83.655C243.377 82.175 242.487 81.685 241.817 82.225C240.297 83.445 244.407 87.945 240.277 91.265C236.747 94.095 231.727 91.325 228.697 87.555C226.787 85.185 226.987 83.625 228.387 82.505L228.377 82.495Z"
+            fill="#042F1A" />
+        <path
+            d="M243.957 90.3358C247.627 88.2658 253.977 87.4658 257.517 93.7458C260.217 98.5358 258.787 102.436 254.747 104.706C252.507 105.966 250.877 105.546 249.727 103.506C248.597 101.506 247.307 99.1358 246.547 97.7758C246.257 97.2658 245.977 97.2458 245.637 97.4358C244.887 97.8558 244.227 99.2158 245.447 101.396C246.237 102.786 247.157 103.706 248.127 105.436C248.987 106.966 248.597 108.176 247.267 108.916C245.297 110.026 242.817 108.966 240.347 104.576C236.437 97.6458 240.217 92.4258 243.957 90.3258V90.3358ZM252.627 99.3658C253.577 98.8258 254.027 97.6358 253.237 96.2458C252.397 94.7458 250.927 94.4558 249.977 94.9958C249.397 95.3258 249.417 95.6658 250.627 97.8058C251.627 99.5758 251.977 99.7258 252.627 99.3658Z"
+            fill="#042F1A" />
+        <path
+            d="M253.938 107.406C259.238 105.656 263.918 106.906 265.328 111.166C265.888 112.866 265.788 114.056 265.208 115.396C265.068 115.726 264.998 115.876 265.108 116.206C265.178 116.426 265.448 116.506 265.968 116.336C266.748 116.076 267.978 115.586 269.058 115.236C271.428 114.456 272.618 115.086 273.278 117.086C273.938 119.086 273.248 120.466 271.168 121.646C268.138 123.306 264.328 124.686 260.628 125.906C256.808 127.166 254.298 127.746 252.618 127.896C250.608 127.896 249.528 127.106 249.068 125.736C248.638 124.436 248.978 123.466 249.818 122.656C250.288 122.216 250.448 121.956 250.348 121.656C250.258 121.396 250.018 121.276 249.538 121.066C247.978 120.436 246.918 119.346 246.388 117.756C245.188 113.876 247.648 109.496 253.938 107.416V107.406ZM257.798 119.476C260.058 118.726 260.528 116.806 260.118 115.546C259.538 113.806 257.948 113.216 255.948 113.876C253.908 114.546 252.948 115.976 253.518 117.716C253.938 118.976 255.458 120.236 257.798 119.466V119.476Z"
+            fill="#042F1A" />
+        <path
+            d="M49.7271 150.995C49.6271 154.525 46.5871 157.305 42.9171 157.205C39.2571 157.095 36.3771 154.155 36.4771 150.625C36.5771 147.095 40.3571 145.205 44.0071 145.315C47.6671 145.425 49.8171 147.475 49.7171 151.005L49.7271 150.995Z"
+            fill="#042F1A" />
+        <path
+            d="M271.077 145.046C270.977 148.576 267.937 151.356 264.267 151.256C260.607 151.146 257.727 148.206 257.827 144.666C257.927 141.136 261.707 139.246 265.357 139.356C269.017 139.466 271.167 141.516 271.067 145.046H271.077Z"
+            fill="#042F1A" />
+        <path
+            d="M185.757 198.516L184.557 200.706C182.647 204.016 179.217 207.716 176.407 210.216C168.227 216.786 158.007 219.856 147.787 218.816C129.867 216.856 114.697 201.416 109.457 195.466C116.147 189.106 137.307 171.076 157.647 175.746C163.097 176.996 167.517 178.846 171.097 180.946C177.707 184.836 182.787 191.116 185.747 198.486V198.516"
+            stroke="#042F1A" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M203.958 184.426C203.958 184.426 194.098 211.466 139.268 197.376" stroke="#042F1A"
+            stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+            d="M92.1166 156.045L91.0966 153.765C89.6166 150.225 88.7066 145.165 88.3866 141.335C87.9966 130.585 91.5266 120.135 98.2666 112.065C110.197 98.0152 131.077 94.1052 138.777 93.1152C139.867 102.475 141.697 130.895 126.237 145.425C122.097 149.325 118.087 152.005 114.367 153.815C107.487 157.165 99.6266 157.825 92.1466 156.055H92.1166"
+            stroke="#042F1A" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M92.5772 179.655C92.5772 179.655 77.1472 155.605 119.977 117.285" stroke="#042F1A"
+            stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+            d="M178.246 100.105L180.666 100.015C184.376 99.9653 189.206 101.055 192.716 102.225C202.386 106.015 210.266 113.445 214.806 123.045C222.626 139.935 218.006 161.495 215.906 169.275C207.196 166.695 181.326 157.445 174.446 136.985C172.596 131.495 171.776 126.615 171.616 122.335C171.316 114.435 173.766 106.635 178.236 100.135L178.256 100.105"
+            stroke="#042F1A" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M157.166 91.3958C157.166 91.3958 184.436 85.9058 201.786 141.856" stroke="#042F1A"
+            stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+</span>
+
+
+
+
+    <!-- 
+    1.  cdn js to add the wow js libraries/wow
+    2. bootstrap
+    3.gsap cdn js
+    4. gsap scrolltrigger
+    5. script.js
+    6.michalsnik/aos  animate.style-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+
+
+
+
+
+        
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 400,
+        });
+        
+        gsap.from(".aboutsection .dic", {
+            duration: 2,
+            scrollTrigger: ".aboutsection .dic"
+        })
+        
+        gsap.from(".aboutsection .aboutcntn", {
+            duration: 2,
+            scrollTrigger: ".aboutsection .dic"
+        })
+        
+        gsap.from("aboutcvg", {
+            scale:0,
+            duration:2,
+            rotate: 360,
+            backgroundColor:"blue",
+            // scrollTrigger:"#page3 #box",
+            scrollTrigger:{
+                trigger:"aboutcvg",
+                scroller:"body"
+            }
+        }) 
+        gsap.from(".abouttxt h3 p", {
+            scale:0,
+            duration:2,
+            rotate: 360,
+            backgroundColor:"royalblue",
+            // scrollTrigger:"#page3 #box",
+            scrollTrigger:{
+                trigger:".abouttxt h3 p",
+                scroller:"body",
+            }
+        }) 
+    </script>
+
+
+
+{% endblock body %}
